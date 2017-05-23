@@ -3,21 +3,61 @@
 <html>
 <head>
 <meta charset="utf-8">
-	<title>Crystal Collector</title>
+  <title>Crystal Collector</title>
 <script
   src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
   crossorigin="anonymous"></script>
-		
+  <link rel="stylesheet" type="text/css" href="styles.css">
+
+    
 </head>
 <body>
 
-
+<h1>Target-score: <span id="target-score"></span></h1>
+<div>
+  <img id="blue" class="crystal" src="./assets/blue.png">
+  <img id="green" class="crystal" src="./assets/green.png">
+  <img id="red" class="crystal" src="./assets/red.png">
+  <img id="yellow" class="crystal" src="./assets/yellow.png">
+</div>
 <script type="text/javascript">
 
-	$(document).ready(function(){
-		
+  $(document).ready(function(){
+    var randomScore = Math.floor(Math.random() * 120-19) + 19;
+    var randomBlue = Math.floor(Math.random() * 12-1) + 1;
+    var randomGreen = Math.floor(Math.random() * 12-1) + 1;
+    var randomRed = Math.floor(Math.random() * 12-1) + 1;
+    var randomYellow = Math.floor(Math.random() * 12-1) + 1;
 
-	});
+
+    var bluePoints=0;
+    var greenPoints=0;
+    var redPoints=0;
+    var yellowPoints=0;
+
+    $("#target-score").html(randomScore);
+    $( ".crystal" ).click(function() {
+      alert( "Handler for .click() called." );
+
+      if (this.id=="blue"){
+        alert ("this is blue"); 
+      }
+      if (this.id=="green"){
+        alert ("this is green"); 
+      }
+      if (this.id=="red"){
+        alert ("this is red"); 
+      }
+      if (this.id=="yellow"){
+        alert ("this is yellow"); 
+      }
+      
+    });
+
+
+  });
+
+
 </script>
 
 
